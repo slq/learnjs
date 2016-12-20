@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var learnjs = {};
 
@@ -16,4 +16,8 @@ learnjs.showView = function (hash) {
     if (viewFn) {
         $('.view-container').empty().append(viewFn(hashParts[1]));
     }
+};
+
+learnjs.appOnReady = function () {
+    learnjs.showView(window.location.hash);
 }
